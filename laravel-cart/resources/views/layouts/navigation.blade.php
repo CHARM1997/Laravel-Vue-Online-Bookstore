@@ -6,17 +6,17 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/171aab11343589.560f62b364d67.JPG" style="width:200px;height:60px;">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('products.list')" :active="request()->routeIs('products.list')">
+                <x-nav-link :href="route('products.list')" :active="request()->routeIs('products.list')">
                         {{ __('Products') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Profile') }}
                     </x-nav-link>
                     <a href="{{ route('cart.list') }}" class="flex items-center">
                         <svg class="w-5 h-5 text-purple-600" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">

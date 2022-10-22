@@ -1,9 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/171aab11343589.560f62b364d67.JPG" style="width:300px;height:120px;">
         </x-slot>
 
         <!-- Session Status -->

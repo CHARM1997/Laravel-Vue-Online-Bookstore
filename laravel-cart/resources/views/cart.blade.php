@@ -74,8 +74,8 @@
                              
                           </tbody>
                         </table>
-                        <div>
-                         Total: ${{ Cart::getTotal() }}
+                        <div class= "text-right">
+                         Total : $ {{ Cart::getTotal() }}
                         </div>
                         <div>
                           <form action="{{ route('cart.clear') }}" method="POST">
