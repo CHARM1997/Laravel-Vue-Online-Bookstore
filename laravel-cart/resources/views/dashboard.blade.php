@@ -23,11 +23,11 @@
         </div>
       </div>
       <div class="flex flex-col pt-4 mx-auto my-auto sm:pt-0 sm:mx-0">
-      </div>
+      <div class="w-full pt-5">
+      <h1 class="text-lg font-semibold text-gray-800 sm:text-xl"> username - {{ Auth::user()->name }}</h1>
+      <p class="text-sm text-gray-700 md:text-base"> e-mail - {{ Auth::user()->email }}</p>  
     </div>
-    <div class="w-full pt-5">
-      <h1 class="text-lg font-semibold text-gray-800 sm:text-xl">username - {{ Auth::user()->name }}</h1>
-      <p class="text-sm text-gray-700 md:text-base">e-mail - {{ Auth::user()->email }}</p>  
+      </div>
     </div>
   </div>
 </div>

@@ -19,10 +19,10 @@
                           <thead>
                             <tr class="h-12 uppercase">
                               <th class="hidden md:table-cell"></th>
-                              <th class="text-left">Name</th>
+                              <th class="text-left">Name Of The Book</th>
                               <th class="pl-5 text-left lg:text-right lg:pl-0">
                                 <span class="lg:hidden" title="Quantity">Qtd</span>
-                                <span class="hidden lg:inline">Quantity</span>
+                                <span class="hidden lg:inline">Quantity of Items</span>
                               </th>
                               <th class="hidden text-right md:table-cell"> price</th>
                               <th class="hidden text-right md:table-cell"> Remove </th>
@@ -38,20 +38,21 @@
                               </td>
                               <td>
                                 <a href="#">
-                                  <p class="mb-2 md:ml-4 text-purple-600 font-bold">{{ $item->name }}</p>
+                                  <p class="mb-2 md:ml-4 text-lg text-purple-600 font-bold">{{ $item->name }}</p>
                                   
                                 </a>
                               </td>
                               <td class="justify-center mt-6 md:justify-end md:flex">
-                                <div class="h-10 w-28">
+                                <div class="h-10 w-30">
                                   <div class="relative flex flex-row w-full h-8">
                                     
                                     <form action="{{ route('cart.update') }}" method="POST">
-                                      @csrf
-                                      <input type="hidden" name="id" value="{{ $item->id}}" >
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $item->id}}" >
+                                    <br>
                                     <input type="text" name="quantity" value="{{ $item->quantity }}" 
                                     class="w-16 text-center h-6 text-gray-800 outline-none rounded border border-blue-600" />
-                                    <button class="px-4 mt-1 py-1.5 text-sm rounded rounded shadow text-violet-100 bg-violet-500">Update</button>
+                                    <button class="px-4 mt-1 py-1.4 text-sm rounded rounded shadow text-violet-100 bg-violet-500">Update</button>
                                     </form>
                                   </div>
                                 </div>
@@ -74,7 +75,8 @@
                              
                           </tbody>
                         </table>
-                        <div class= "text-right">
+                        <div class= "text-right text-xl font-bold">
+                          <br>
                          Total : $ {{ Cart::getTotal() }}
                         </div>
                         <div>
